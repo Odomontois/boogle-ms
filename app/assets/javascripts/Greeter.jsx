@@ -6,4 +6,4 @@ class Greeter extends React.Component {
     }
 }
 
-export default Greeter;nm
+export default Greeter;

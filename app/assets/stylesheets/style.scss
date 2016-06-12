@@ -1,7 +1,9 @@
 html {
-  $primary-color: skyblue;
+  $primary-color: rgba(255, 209, 231, 0.25);
+  $text-color: red;
 
   body {
     background-color: $primary-color;
+    color: $text-color;
   }
 }

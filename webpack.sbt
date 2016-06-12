@@ -1,7 +1,9 @@
+import scala.language.postfixOps
+
 lazy val webpack = TaskKey[Unit]("Run webpack when packaging the application")
 
 def runWebpack(file: File) = {
-  Process("webpack", file) !
+  Process("webpack.cmd", file) !
 }
 
 webpack := {

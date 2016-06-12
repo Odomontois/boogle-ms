@@ -28,6 +28,6 @@ watchSources ~= { (ws: Seq[File]) =>
   }
 }
 
-pipelineStages := Seq(digest, gzip)
+pipelineStages := Seq(rjs, digest, gzip)
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"

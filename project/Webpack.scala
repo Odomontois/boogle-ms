@@ -3,19 +3,23 @@ import play.sbt.PlayRunHook
 import sbt._
 
 object Webpack {
+  println(System.getenv("PATH"))
+
+
   def apply(base: File): PlayRunHook = {
     object WebpackHook extends PlayRunHook {
+
       var process: Option[Process] = None
 
       override def beforeStarted() = {
         process = Option(
-          Process("webpack", base).run()
+          Process("webpack.cmd", base).run()
         )
       }
 
       override def afterStarted(addr: InetSocketAddress) = {
         process = Option(
-          Process("webpack --watch", base).run()
+          Process("webpack.cmd --watch", base).run()
         )
       }
 

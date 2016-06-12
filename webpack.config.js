@@ -34,10 +34,12 @@ var config = {
             },
             {
                 test: /\.scss$/,
-                include: /\/app\/assets/,
                 loader: 'style!css!sass'
             }
         ]
+    },
+    sassLoader: {
+        includePaths: [path.resolve(__dirname, '\/app\/assets')]
     },
     plugins: [
         //new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),

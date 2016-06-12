@@ -7,5 +7,5 @@ import '../stylesheets/style.scss'
 render((
     <div>
         <h1>Playframework, React JS, ES 6 and webpack</h1>
-        <Greeter name="Ninja" />
+        <Greeter name="Oleg" />
     </div>), document.getElementById("app"));
